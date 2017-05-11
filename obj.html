@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Object</title>
+
+    <script>
+      var snail = {
+        name : 'wu',
+        birth : 1992,
+        school : 'lu',
+        score : null,
+        'middle-school' : 'LL NO.1'
+      };
+      snail.name;   //'Xavier'
+      snail.birth;  //1994
+      snail['middle-school']; //'SS NO.2'
+      snail['name'];  //'Xavier'
+      snail['girlfriend'];  //undefined:girlfriend不存在
+      //JS的对象是动态类型，你可以自由的给一个对象添加或删除属性
+      snail.route = 'xiaomi';
+      snail.weight = 182;
+      /*
+      var snail = {
+        name : 'Xavier',
+        birth : 1994,
+        school : 'SS',
+        score : null,
+        'middle-school' : 'SS NO.2',
+        route : 'YB',
+        weight : 170
+      };
+      */
+      //检测对象是否有这个属性的方法
+      if (!('name1' in snail)) {
+        alert(snail.toString())
+      }
+      //有些属性不一定是snail的，有可能是snail继承的 判断是否是自己的属性 用下面方法来判断
+      var s = {
+        name : 'Snail'
+      };
+      s.hasOwnProperty('name'); //true
+      s.hasOwnProperty('toString'); //fasle
+    </script>
+
+  </head>
+  <body>
+
+  </body>
+</html>
